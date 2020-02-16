@@ -12,15 +12,15 @@ namespace UsoRegEx01
         static void Main(string[] args)
         {
             //aprender uso RegEx
-            string frase = "Mi nombre es Oscar y mi nº de tfno es (+34)123-45-67 y mi codigo postal es 28029";
-            string pattern = @"\+44";
+            string frase = "Mi web es http://pildorasinformaticas.es";
+            string pattern = "https?://(www.)?pildorasinformaticas.es";
 
             Regex findPhrase = new Regex(pattern);
 
             MatchCollection coincidencia= findPhrase.Matches(frase);
 
-            if (coincidencia.Count > 0) Console.WriteLine("se han encontrado numeros");
-            else Console.WriteLine("no se han encontrado numeros");
+            if (coincidencia.Count > 0) Console.WriteLine("se han encontrado web");
+            else Console.WriteLine("no se han encontrado web");
 
             
         }
